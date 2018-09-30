@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import styled, { keyframes } from 'styled-components';
+import logo from './logo.svg';
+import './App.css';
+import RichTextExample from './rich-text';
 
 const Button = styled.button`
   color: red;
@@ -25,7 +26,7 @@ const Rotate = styled.div`
 `;
 
 class App extends Component {
-  str = "2018-01-01 12:11";
+  str = '2018-01-01 12:11';
 
   handleOpen = () => {
     console.log(this.str.substring(0, 11));
@@ -35,14 +36,14 @@ class App extends Component {
   handleOpen1 = () => {
     setTimeout(() => {
       setTimeout(() => {
-        window.open("https://docschina.org/");
+        window.open('https://docschina.org/');
       }, 0);
     }, 1000);
   };
 
   handleOpen2 = () => {
     this.timeout(() => {
-      window.open("https://docschina.org/");
+      window.open('https://docschina.org/');
       // let newWindow = window.open();
       // newWindow.location = 'https://docschina.org/'
     });
@@ -52,7 +53,7 @@ class App extends Component {
     const newWindow = window.open();
 
     setTimeout(() => {
-      newWindow.location = "https://docschina.org/";
+      newWindow.location = 'https://docschina.org/';
     }, 2000);
   };
 
@@ -77,7 +78,8 @@ class App extends Component {
         <div onClick={this.handleOpen2}>Open cb</div>
         <div onClick={this.handleOpen3}>Open 成功</div>
         <Button>styled-components</Button>
-        <Rotate>&lt; 💅 &gt;</Rotate>
+        <Rotate>&lt; &gt;</Rotate>
+        <RichTextExample />
       </div>
     );
   }
