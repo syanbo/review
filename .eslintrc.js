@@ -27,7 +27,6 @@ module.exports = {
     'no-console': 0,
     'no-unused-expressions': 0,
     'no-extra-boolean-cast': 0,
-    eqeqeq: 0,
   },
   settings: {
     polyfills: ['fetch', 'promises', 'url'],

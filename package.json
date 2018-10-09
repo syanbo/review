@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "precommit": "npm run lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "precommit": "yarn run lint-staged",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js",
     "prettier": "prettier --write ./src/**/**/**/*"
@@ -41,7 +41,7 @@
       "prettier --write",
       "git add"
     ],
-    "**/*.{js,jsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx}": "yarn run lint-staged:js",
     "**/*.less": "stylelint --syntax less"
   }
 }
