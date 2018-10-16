@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  onPress = e => {
+    const a = 1;
+    // return a + 10;
+  };
   render() {
     return (
       <div className="App">
