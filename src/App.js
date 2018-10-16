@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
+import { Router, Link } from '@reach/router';
+import Loadable from 'react-loadable';
 import { Header } from './components';
-import logo from './logo.svg';
+import Home from './pages/home';
+import Dash from './pages/dash';
 import './App.css';
 
+const AsyncDashboard = Loadable({
+  loader: () => import('./pages/dashboard'),
+  loading: <div>加载中...</div>,
+});
+
 class App extends Component {
-  onPress = () => {
-    const a = 1;
-    return a + 10;
-  };
   render() {
     return (
       <div className="App">
         <Header />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" onClick={this.onPress} />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="dashboard">Dashboard</Link>
+          <Link to="dash">Dash</Link>
+          <Link to="users/123">Bob</Link>
+        </nav>
+        <Router>
+          <Home path="/" />
+          <AsyncDashboard path="dashboard/*" />
+          <Dash path="dash" />
+        </Router>
       </div>
     );
   }
