@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import { Header } from './components';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  onPress = e => {
+  onPress = () => {
     const a = 1;
     return a + 10;
   };
   render() {
     return (
       <div className="App">
+        <Header />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" onClick={this.onPress} />
           <p>

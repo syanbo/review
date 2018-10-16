@@ -53,3 +53,19 @@ plugin:prettier/recommended
 
 如果函数是为了处理一些操作，比如登录，注册，渲染列表等。那么就建议命名前面带有 handle。
 `handleRegister = () => {}`
+
+#### GIT
+
+##### 分支命名
+功能分支以【feature】开头 feature/goods
+bug修复分支以【fix】开头 fix/list
+
+##### 提交规范
+
+| 动作 | 描述 |
+| --- | --- |
+| add | 新增 |
+| change | 修改 |
+| fix | 修复bug |
+| upgrade | 更新 |
+| refactor | 重构代码 |
