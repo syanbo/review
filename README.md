@@ -1,6 +1,8 @@
-## XiaoZaoFE规范
+## XiaoZaoFE 规范
 
 #### ESLint
+
 - prettier
-- airbnb
+- eslint-config-prettier
+- eslint-config-react-app
 - lint-staged
