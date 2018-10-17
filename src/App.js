@@ -8,7 +8,14 @@ import './App.css';
 
 const AsyncDashboard = Loadable({
   loader: () => import('./pages/dashboard'),
-  loading: <div>加载中...</div>,
+  loading: err => {
+    console.log(err);
+    return (
+      <div>
+        <h2>Dashboard</h2>
+      </div>
+    );
+  },
 });
 
 class App extends Component {
